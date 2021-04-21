@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Show Table Contents</title>
+<link rel="stylesheet" type="text/css" href="css/showtable.css">
+</head>
+<body>
+  <input type="hidden" id="cmd" value="SELECT">
+  <input id="tblname" list="tablename" placeholder="Table Name">
+  <datalist id="tablename">
+    <option value="users">
+    <option value="sales_orders">
+    <option value="purchase_orders">
+  </datalist>
+
+  <input class="load_btn" type="button" onClick="showtable()" value="Load">
+  <input class="go_btn" type="button" onClick="prevpage()" value="<">
+  <input class="go_btn" type="button" onClick="nextpage()" value=">">
+
+  <lable for="pagesz">Rows/Page:</lable>
+  <input id="pagesz" value=5>
+
+  <lable for="pgnum">To page:</lable>
+  <input class="input" type="text" id="pgnum" onkeypress="topage()">
+
+  <div id="tbltoggle" onClick="tbltoggle()"></div>
+  <div id="tblcontent">
+  <table id="users">
+  <thead></thead>
+  <tbody></tbody>
+  </table>
+  </div>
+
+  <script src="script/showtable.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+th {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px dashed #CC0000;
+}
+.thead {
+  font-weight:bold;
+  color: #C0C000;
+}
+td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px dashed #CCCCCC;
+}
+.tdata {
+  color: #888888;
+}
+.idx {
+  color: #EE0000;
+}
+.idx:hover {
+  cursor: pointer;
+}
+.go_btn {
+  border-radius: 3px;
+  background-color: white;
+  border: 2px solid #4CAF50;
+  color: #4CAF50;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 3px 1px;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+.go_btn:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+[contenteditable='true'] {
+  caret-color: red;
+}
+.load_btn {
+  border-radius: 3px;
+  background-color: white;
+  border: 2px solid #00CCCC;
+  color: #00CCCC;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 3px 1px;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+.load_btn:hover {
+  background-color: #00CCCC;
+  color: white;
+}
+.load_btn:disabled {
+  background-color: white;
+  border: 2px solid #EEEEEE;
+  color: #EEEEEE;
+}
+#tblname {
+  border-radius: 3px;
+  background-color: white;
+  border: 1px solid #4CAF50;
+  color: #111111;
+  padding: 5px 5px;
+  font-size: 16px;
+  text-align: center;
+  display: inline-block;
+}
+#pgnum {
+  border-radius: 3px;
+  background-color: white;
+  border: 1px solid #4CAF50;
+  color: #4CAF50;
+  padding: 5px 5px;
+  text-align: center;
+  display: inline-block;
+  height:20px;
+  width:35px;
+}
+#pagesz {
+  border-radius: 3px;
+  background-color: white;
+  border: 1px solid #4CAF50;
+  color: #4CAF50;
+  padding: 5px 5px;
+  text-align: center;
+  display: inline-block;
+  height:20px;
+  width:25px;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #BBBBBB;
+}
+lable {
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #00C0C0;
+  padding: 3px 3px;
+  margin: 3px 1px;
+  text-align: center;
+  display: inline-block;
+}
+#tbltoggle {
+  color: #0000bb;
+  padding: 5px 5px;
+  margin: 12px 1px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}

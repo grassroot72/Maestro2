@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Webserver test</title>
+  </head>
+  <body>
+    <h3><p>This is a webserver test page.</p></h3>
+    <img src="data:image/png;base64,
+             iVBORw0KGgoAAAANSUhEUgAAAAUA
+             AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO
+             9TXL0Y4OHwAAAABJRU5ErkJggg==" alt="Red dot">
+    <p><a href="ASCII.32-127.txt">ASCII printable characters (32-127)</a></p>
+    <p>ASCII was the first character encoding standard (also called character set).
+       Because ANSI and ISO-8859-1 were so limited, HTML 4 also supported UTF-8.
+       UTF-8 (Unicode) covers almost all of the characters and symbols in the world.
+       The default character set for HTML5 is UTF-8.</p>
+    <p>Codes 32-127 are common for all the different variations of the ASCII table,
+       they are called printable characters, represent letters, digits, punctuation
+       marks, and a few miscellaneous symbols. You will find almost every character
+       on your keyboard. Character 127 represents the command DEL.</p>
+    <p>There are several different variations of the 8-bit ASCII table.
+       The table below is according to Windows-1252 (CP-1252) which is a
+       superset of ISO 8859-1, also called ISO Latin-1, in terms of printable
+       characters, but differs from the IANA's ISO-8859-1 by using displayable
+       characters rather than control characters in the 128 to 159 range.
+       Characters that differ from ISO-8859-1 is marked by light blue color.</p>
+    <p>在计算机数据处理中，哈夫曼编码使用变长编码表对源符号（如文件中的一个字母）进行编码，
+       其中变长编码表是通过一种评估来源符号出现机率的方法得到的，出现机率高的字母使用较短的编码，
+       反之出现机率低的则使用较长的编码，这便使编码之后的字符串的平均长度、期望值降低，从而达到
+       无损压缩数据的目的。</p>
+    <p>例如，在英文中，e的出现机率最高，而z的出现概率则最低。当利用哈夫曼编码对一篇英文进行压缩时，
+       e极有可能用一个比特来表示，而z则可能花去25个比特（不是26）。用普通的表示方法时，每个英文
+       字母均占用一个字节，即8个比特。二者相比，e使用了一般编码的1/8的长度，z则使用了3倍多。
+       倘若我们能实现对于英文中各个字母出现概率的较准确的估算，就可以大幅度提高无损压缩的比例。</p>
+    <p>哈夫曼树又称最优二叉树，是一种带权路径长度最短的二叉树。所谓树的带权路径长度，就是树中所有
+       的叶结点的权值乘上其到根结点的路径长度（若根结点为0层，叶结点到根结点的路径长度为叶结点的
+       层数）。</p>
+
+    <p>树的路径长度是从树根到每一结点的路径长度之和，
+       记为WPL=（W1*L1+W2*L2+W3*L3+...+Wn*Ln），N个权值Wi（i=1,2,...n）
+       构成一棵有N个叶结点的二叉树，相应的叶结点的路径长度为Li（i=1,2,...n）。
+       可以证明哈夫曼树的WPL是最小的。</p>
+  </body>
+</html>

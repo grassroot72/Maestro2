@@ -33,7 +33,7 @@ with cookies in Maetro. Other auth themes are not considered for now.
 
 ## Applicable Scenarios
 The source code could be adapted to work as a framework for developing 
-high perfomance appication servers.
+high perfomance application servers.
 
 ## Contact
 If you are interested in the project, drop me an email at Edward_lei72@hotmail.com

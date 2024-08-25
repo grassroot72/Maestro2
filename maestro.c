@@ -45,7 +45,8 @@ int main(int argc, char **argv)
   httpcfg_t *cfg = httpcfg_new();
 
   /* create a postgresql db connection */
-  PGconn *pgconn = pg_connect("dbname = demo", "identity");
+  /* PGconn *pgconn = pg_connect("dbname = demo", "identity"); */
+  PGconn *pgconn = NULL;
   /* must called before calling libdeflate_alloc_compressor */
   libdeflate_set_memory_allocator(xmalloc, xfree);
 
@@ -169,7 +170,7 @@ int main(int argc, char **argv)
   close(epfd);
   xfree(events);
 
-  PQfinish(pgconn);
+  /* PQfinish(pgconn); */
   httpcfg_delete(cfg);
 
   D_PRINT("Exit gracefully...\n");

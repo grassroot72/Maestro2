@@ -20,16 +20,16 @@
 #define MASTER_INTERVAL 30
 
 
-typedef struct _th_dlnode {
-  struct _th_dlnode *next;
-  struct _th_dlnode *prev;
-} th_dlnode_t;
+typedef struct _tp_dlnode {
+  struct _tp_dlnode *next;
+  struct _tp_dlnode *prev;
+} tp_dlnode_t;
 
 typedef struct {
   void (*routine)(void *arg);
   void *arg;
-  th_dlnode_t entry;
-} th_task_t;
+  tp_dlnode_t entry;
+} tp_task_t;
 
 typedef struct {
   pthread_t tid;
@@ -38,34 +38,32 @@ typedef struct {
   int state;                /* THREAD_STATE_BUSY or THREAD_STATE_IDLE */
   int stop;                 /* mark if the thread is going to quit */
   int queue_size;           /* the number of tasks in the task_queue */
-  th_dlnode_t task_queue;   /* the head of task queue*/
-  th_dlnode_t worker_entry; /* a node in the thread pool's worker queue */
-  th_dlnode_t idle_entry;   /* a node in the thread pool's idle queue */
-  void *tp;
+  tp_dlnode_t task_queue;   /* the head of task queue*/
+  tp_dlnode_t worker_entry; /* a node in the thread pool's worker queue */
+  tp_dlnode_t idle_entry;   /* a node in the thread pool's idle queue */
+  void *tp;                 /* thread pool */
 } thread_t;
 
 typedef struct {
-  th_dlnode_t worker_queue; /*the head of worker queue */
-  th_dlnode_t idle_queue;   /*the head of idle queue */
-  thread_t *master_thread;  /*the struct of master thread */
-  pthread_mutex_t global;   /*the global lock for thread pool */
+  tp_dlnode_t worker_queue; /* the head of worker queue */
+  tp_dlnode_t idle_queue;   /* the head of idle queue */
+  thread_t *master_thread;  /* the struct of master thread */
+  pthread_mutex_t global;   /* the global lock for thread pool */
   thread_t *task_next;
-  int size;                /* the number of threads */
-  int max_size;            /* maxium number of threads */
-  int min_size;            /* minium numbers of threads */
-  double low_level;        /* the maxium proportion threshold of idle threads */
-  double high_level;       /* the minium proportion threshold of idle threads */
-  int master_interval;     /* the working interval of master thread */
+  int size;                 /* the number of threads */
+  int max_size;             /* maxium number of threads */
+  int min_size;             /* minium numbers of threads */
+  double low_level;         /* the maxium proportion threshold of idle threads */
+  double high_level;        /* the minium proportion threshold of idle threads */
+  int master_interval;      /* the working interval of master thread */
 } thpool_t;
 
 
 thpool_t *thpool_new(int size);
 
-void thpool_delete(thpool_t *p);
+void thpool_delete(thpool_t *tp);
 
-void thpool_add_task(thpool_t *p,
-                     void (*routine)(void *),
-                     void *arg);
+void thpool_add_task(thpool_t *tp, void (*routine)(void *), void *arg);
 
 
 #endif
